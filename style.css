@@ -59,6 +59,7 @@ li{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    margin-bottom: 20px;
 }
 
 .active, .dot:hover {
@@ -77,12 +78,18 @@ li{
 
 nav{
     background-color: #FFD2E5;
+    grid-area: nav;
 }
 
 h1{
     font-size: 40px;
     margin-left: 40px;
     margin-top: 20px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
 }
 
 .catprod{
@@ -93,7 +100,34 @@ h1{
 }
 
 main{
-    
+    display: flex;
+    flex-direction: column;
+    grid-area: main;
+}
+
+.products{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+article{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+button{
+    border-radius: 20px;
+    padding: 20px 16px;
+    font-family: monospace;
+    background-color: #362418;
+    border-color: #362418;
+    color: #FFD2E5;
+    align-items: center;
+}
+
+img{
+    border-radius: 30px;
 }
 
 /* phone */
