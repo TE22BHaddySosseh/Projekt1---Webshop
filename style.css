@@ -76,6 +76,12 @@ li{
     to {opacity: 1}
 }
 
+.box{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    
+}
+
 nav{
     background-color: #FFD2E5;
     grid-area: nav;
