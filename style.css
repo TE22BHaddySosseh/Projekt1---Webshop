@@ -1,3 +1,7 @@
+.container{
+    transition: transform .5s;
+}
+
 .pfp{
     border-radius: 50%;
     padding-left: 10px;
@@ -18,7 +22,8 @@ li{
     flex-direction: row;
 }
 
-.cart{
+
+.iconcart{
     display: flex;
     color: #362418;
     padding-top: 35px;
@@ -27,19 +32,27 @@ li{
 
 .carttab{
     display: flex;
-    width: 70%;
     margin-bottom: 30px;
-    width: 60%;
+    width: 30%;
+    height: 40%;
     border-radius: 5px;
     background-color: #FFD2E5;
     margin-left: 20px;
     padding: 15px;
     position: fixed;
-    inset: 0 -400px 0 auto;
+    inset: 0 -500px 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
+    
 }
 
+body .showcart .carttab{
+    inset: 0 0 0 auto;
+}
+
+.showcart .container{
+    transform: translateX(-500px);
+}
 .carttab .listcart .item img{
     width: 50px;
     height: 50px;
@@ -52,6 +65,8 @@ li{
     text-align: center;
     align-items: center;
 }
+
+
 
 .listcart .quantity span{
     display: inline-block;

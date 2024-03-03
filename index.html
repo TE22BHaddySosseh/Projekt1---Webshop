@@ -7,183 +7,184 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="/script.js"></script>
 </head>
-<body>
+<body class="showcart">
+    <div class="container">
+        <header>
+            <div class="top-hdr">
+                <div class="pfp">
+                    <img src="./img/white-circle-free-png.webp" alt="frog with a bow on looking into a mirror" width="100px" height="100px">
+                </div>
+                <li>
+                    <a href="">HOME</a>
+                    <a href="">CONTACT US</a>
+                    <a href="">ABOUT US</a> 
+                </li>            
 
-    <header>
-        <div class="top-hdr">
-            <div class="pfp">
-                <img src="./img/white-circle-free-png.webp" alt="frog with a bow on looking into a mirror" width="100px" height="100px">
+                <div class="iconcart">
+                    <img src="/img/shoppingcart.webp" alt="Shopping Cart" width="90px" height="45px" onclick="ToggleCart()">
+                </div>
             </div>
-            <li>
-                <a href="">HOME</a>
-                <a href="">CONTACT US</a>
-                <a href="">ABOUT US</a> 
-            </li>
-            <div class="cart">
-                <img src="/img/shoppingcart.webp" alt="Shopping Cart" width="90px" height="45px">
-            </div>
-        </div>
-        <div class="carttab">
-                <div class="head"><p>My Cart</p></div>
-                <div class="listcart">
-                    <div class="item">
-                        <div class="image">
-                            <img src="/img/flowernails.webp" alt="">
-                        </div>
-                        <div class="name">
-                            NAME
-                        </div>
-                        <div class="totalprice">
-                            240kr
-                        </div>
-                        <div class="quantity">
-                            <span class="minus"><</span>
-                            <span>1</span>
-                            <span class="plus">></span>
+            <div class="carttab">
+                    <div class="head"><p>My Cart</p></div>
+                    <div class="listcart">
+                        <div class="item">
+                            <div class="image">
+                                <img src="/img/flowernails.webp" alt="">
+                            </div>
+                            <div class="name">
+                                NAME
+                            </div>
+                            <div class="totalprice">
+                                240kr
+                            </div>
+                            <div class="quantity">
+                                <span class="minus"><</span>
+                                <span>1</span>
+                                <span class="plus">></span>
+                            </div>
                         </div>
                     </div>
+                    <div id="cartitem">Your cart is empty!</div>
+                    <div class="sum">
+                        <h3>Total</h3>
+                        <h3 id="total">0.00kr</h3>
+                    </div>
+                    <div class="btn">
+                        <button class="close">Close</button>
+                        <button class="checkout">Check Out</button>
+                    </div>
+            </div>
+            <div class="preview-slider">
+                <div class="wrapper">
+                    <div class="wrapper-products">
+                        <img src="./img/blue_skypastel.webp" alt="Product 2" width="100%" height="600px">
+                        <img src="./img/doostain.webp" alt="Product 3" width="100%" height="600px"> 
+                        <img src="./img/peri.webp" alt="Product 4" width="100%" height="600px">
+                    </div>
                 </div>
-                <div id="cartitem">Your cart is empty!</div>
-                <div class="sum">
-                    <h3>Total</h3>
-                    <h3 id="total">0.00kr</h3>
-                </div>
-                <div class="btn">
-                    <button class="close">Close</button>
-                    <button class="checkout">Check Out</button>
-                </div>
-        </div>
-        <div class="preview-slider">
-            <div class="wrapper">
-                <div class="wrapper-products">
-                    <img src="./img/blue_skypastel.webp" alt="Product 2" width="100%" height="600px">
-                    <img src="./img/doostain.webp" alt="Product 3" width="100%" height="600px"> 
-                    <img src="./img/peri.webp" alt="Product 4" width="100%" height="600px">
+
+                <a class="prev" onclick="minus(-1)">&#10094;</a>
+                <a class="next" onclick="plus(1)">&#10095;</a>
+                <br>
+
+                <div class="dots">
+                    <span class="dot" onclick="cs(1)"></span>
+                    <span class="dot" onclick="cs(2)"></span>
+                    <span class="dot" onclick="cs(3)"></span>
                 </div>
             </div>
+        </header>
 
-            <a class="prev" onclick="minus(-1)">&#10094;</a>
-            <a class="next" onclick="plus(1)">&#10095;</a>
-            <br>
-
-            <div class="dots">
-                <span class="dot" onclick="cs(1)"></span>
-                <span class="dot" onclick="cs(2)"></span>
-                <span class="dot" onclick="cs(3)"></span>
+            <nav>
+                <h1>
+                    Catalog
+                </h1>
+                <div class="catprod">
+                    <a href="">Nail polish</a><br>
+                    <a href="">Natural nails</a><br>
+                    <a href="">Ballerina nails</a><br>
+                    <a href="">Square nails</a><br>
+                    <a href="">Stiletto nails</a><br>
+                    <a href="">Round nails</a><br>
+                    <a href="">Oval nails</a><br>
+                    <a href="">Nail care</a><br>  
+                </div>
+            </nav>
+            <main>
+                <div class="products">
+                    <article>
+                        <img src="./img/flowernails.webp" alt="Almond style press-on with a glittery flower design" height="300px" width="300px">
+                        <h2>
+                            Glitter Flower Almond Press-on <br>
+                            Nails
+                        </h2>
+                        <h3>240kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/hrtnails.webp" alt="Square press-on nails with a pink and white gradient, and hearts" height="300px" width="300px">
+                        <h2>
+                            White and Pink Heart Square <br>
+                            Press-on Nails
+                        </h2>
+                        <h3>240kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/bluefly.webp" alt="Long coffin press-on nails with a mix of blue nails and clear glittery nails with butterflies" height="300px" width="300px">
+                        <h2>
+                            Blue Butterfly Coffin Press-ons Nails
+                        </h2>
+                        <h3>240kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/gothnails.webp" alt="" height="300px" width="300px">
+                        <h2>
+                            Goth black and white almond <br>
+                            press-on nails
+                        </h2>
+                        <h3>300kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/daisynails.webp" alt="" height="300px" width="300px">
+                        <h2>
+                            White French tip with daisies long <br>
+                            square press-on nails
+                        </h2>
+                        <h3>200kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/ballerinareds.webp" alt="Square press-on nails with a jelly red color" height="300px" width="300px">
+                        <h2>
+                            Jelly red square press on nails
+                        </h2>
+                        <h3>120kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/ovalblues.webp" alt="Oval press-on nails with a pastel blue french tip" height="300px" width="300px">
+                        <h2>
+                            Pastel blue french tip oval press-on <br>
+                            nails
+                        </h2>
+                        <h3>190kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/ovalwhites.webp" alt="Oval press-on nails with a gradient from beige to white" height="300px" width="300px">
+                        <h2>
+                            Gradient oval press-on nails
+                        </h2>
+                        <h3>120kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                    <article>
+                        <img src="./img/chromealmond.webp" alt="Almond press-on nails with " height="300px" width="300px">
+                        <h2>
+                            Multicolored chrome almond <br>
+                            press-on nails
+                        </h2>
+                        <h3>400kr</h3>
+                        <button onclick="addtc">Add To Cart</button>
+                    </article>
+                </div>    
+            </main>
+        
+        <footer>
+            <div class="logo">
+                <img src="./img/goldenlogo.webp" alt="Poshpress Logo" width="200px" height="200px">
             </div>
-        </div>
-    </header>
-
-        <nav>
-            <h1>
-                Catalog
-            </h1>
-            <div class="catprod">
-                <a href="">Nail polish</a><br>
-                <a href="">Natural nails</a><br>
-                <a href="">Ballerina nails</a><br>
-                <a href="">Square nails</a><br>
-                <a href="">Stiletto nails</a><br>
-                <a href="">Round nails</a><br>
-                <a href="">Oval nails</a><br>
-                <a href="">Nail care</a><br>  
+            <div class="nav2">
+                <li>
+                    <a href="">HELP</a>
+                    <a href="">FOLLOW US</a>
+                    <a href="">STORES</a> 
+                </li>
             </div>
-        </nav>
-        <main>
-            <div class="products">
-                <article>
-                    <img src="./img/flowernails.webp" alt="Almond style press-on with a glittery flower design" height="300px" width="300px">
-                    <h2>
-                        Glitter Flower Almond Press-on <br>
-                        Nails
-                    </h2>
-                    <h3>240kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/hrtnails.webp" alt="Square press-on nails with a pink and white gradient, and hearts" height="300px" width="300px">
-                    <h2>
-                        White and Pink Heart Square <br>
-                        Press-on Nails
-                    </h2>
-                    <h3>240kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/bluefly.webp" alt="Long coffin press-on nails with a mix of blue nails and clear glittery nails with butterflies" height="300px" width="300px">
-                    <h2>
-                        Blue Butterfly Coffin Press-ons Nails
-                    </h2>
-                    <h3>240kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/gothnails.webp" alt="" height="300px" width="300px">
-                    <h2>
-                        Goth black and white almond <br>
-                        press-on nails
-                    </h2>
-                    <h3>300kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/daisynails.webp" alt="" height="300px" width="300px">
-                    <h2>
-                        White French tip with daisies long <br>
-                        square press-on nails
-                    </h2>
-                    <h3>200kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/ballerinareds.webp" alt="Square press-on nails with a jelly red color" height="300px" width="300px">
-                    <h2>
-                        Jelly red square press on nails
-                    </h2>
-                    <h3>120kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/ovalblues.webp" alt="Oval press-on nails with a pastel blue french tip" height="300px" width="300px">
-                    <h2>
-                        Pastel blue french tip oval press-on <br>
-                        nails
-                    </h2>
-                    <h3>190kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/ovalwhites.webp" alt="Oval press-on nails with a gradient from beige to white" height="300px" width="300px">
-                    <h2>
-                        Gradient oval press-on nails
-                    </h2>
-                    <h3>120kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-                <article>
-                    <img src="./img/chromealmond.webp" alt="Almond press-on nails with " height="300px" width="300px">
-                    <h2>
-                        Multicolored chrome almond <br>
-                        press-on nails
-                    </h2>
-                    <h3>400kr</h3>
-                    <button onclick="addtc">Add To Cart</button>
-                </article>
-            </div>    
-        </main>
-    
-    <footer>
-        <div class="logo">
-            <img src="./img/goldenlogo.webp" alt="Poshpress Logo" width="200px" height="200px">
-        </div>
-        <div class="nav2">
-            <li>
-                <a href="">HELP</a>
-                <a href="">FOLLOW US</a>
-                <a href="">STORES</a> 
-            </li>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,3 +1,16 @@
+let IconCart = document.querySelector('.iconcart');
+let closeCart = document.querySelector('.close');
+let body = document.querySelector('body');
+
+IconCart.addEventListener('click', () => {
+    body.classList.toggle('showcart');
+})
+
+closeCart.addEventListener('click', () => {
+    body.classList.toggle('showcart');
+})
+
+
 let slideIndex = 1;
 showSlides(slideIndex);
 
