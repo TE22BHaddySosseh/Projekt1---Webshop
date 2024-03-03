@@ -25,7 +25,6 @@ function showSlides(n){
       }
    
     for (i = 0; i < dots.length; i++){
-        // dots[i].className = dots[i].className.replace("active", "");
         dots[i].classList.remove("active");
     }
     console.log("slideInex: ",slideIndex);
@@ -37,3 +36,4 @@ function cs(n)
 {
     showSlides(slideIndex=n);
 }
+

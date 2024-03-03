@@ -19,6 +19,10 @@ li{
     flex-direction: row;
 }
 
+.cart{
+    
+}
+
 .preview {
     max-width: 1000px;
     position: relative;
@@ -76,12 +80,6 @@ li{
     to {opacity: 1}
 }
 
-.box{
-    display: grid;
-    grid-template-columns: 1fr 5fr;
-    
-}
-
 nav{
     background-color: #FFD2E5;
     grid-area: nav;
@@ -120,6 +118,7 @@ main{
 article{
     margin-top: 20px;
     margin-left: 20px;
+    margin-bottom: 50px;
 }
 
 button{
@@ -134,6 +133,20 @@ button{
 
 img{
     border-radius: 30px;
+}
+
+footer{
+    background-color: #362418;
+}
+
+.logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.nav2{
+    margin-left: 50px;
+    margin-bottom: 40px;
 }
 
 /* phone */
