@@ -1,6 +1,9 @@
 let IconCart = document.querySelector('.iconcart');
 let closeCart = document.querySelector('.close');
 let body = document.querySelector('body');
+let listProductHTML = document.querySelector('.listProduct');
+
+let listProduct =[];
 
 IconCart.addEventListener('click', () => {
     body.classList.toggle('showcart');
@@ -9,6 +12,19 @@ IconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showcart');
 })
+
+const initApp = () => {
+    fetch('prod.json')
+    .then(response => response.json())
+    .then(data => {
+        listProduct = data;
+        addDataToHTML();
+    });
+};
+initApp();
+
+const addToCartButtons = document.querySelectorAll('.addtc');
+
 
 
 let slideIndex = 1;
