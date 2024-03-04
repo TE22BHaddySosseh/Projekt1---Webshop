@@ -66,8 +66,6 @@ body .showcart .carttab{
     align-items: center;
 }
 
-
-
 .listcart .quantity span{
     display: inline-block;
     width: 25px;
@@ -93,6 +91,12 @@ body .showcart .carttab{
 
 listcart::-webkit-scrollbar{
     width: 0;
+}
+
+.listcart img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .head{

@@ -23,8 +23,49 @@ const initApp = () => {
 };
 initApp();
 
-const addToCartButtons = document.querySelectorAll('.addtc');
+function addtc(productId) {
+    addToCart(productId);
+}
 
+function addToCart(productId) {
+    const selectedProduct = listProduct.find(product => product.id === productId);
+
+    if (selectedProduct) {
+        console.log(`Added to cart: ${selectedProduct.name}`);
+    } else {
+        console.error(`Product with ID ${productId} not found.`);
+    }
+}
+
+function addToCart(productId) {
+    const selectedProduct = listProduct.find(product => product.id === productId);
+
+    if (selectedProduct) {
+        const imageUrl = selectedProduct.image ? selectedProduct.image : './img/image.webp'
+
+        const cartItemHTML = `
+            <div class="item">
+                <div class="image">
+                    <img src="${selectedProduct.image}" alt="${selectedProduct.name}">
+                </div>
+                <div class="name">${selectedProduct.name}</div>
+                <div class="totalprice">${selectedProduct.price}kr</div>
+                <div class="quantity">
+                    <span class="minus" onclick="inc(${productId}, -1)"><</span>
+                    <span class="quantity-value">1</span>
+                    <span class="plus" onclick="dec(${productId}, 1)">></span>
+                </div>
+            </div>
+        `;
+
+        const listCart = document.querySelector('.listcart');
+        listCart.insertAdjacentHTML('beforeend', cartItemHTML);
+
+        console.log(`Added to cart: ${selectedProduct.name}`);
+    } else {
+        console.error(`Product with ID ${productId} not found.`);
+    }
+}
 
 
 let slideIndex = 1;

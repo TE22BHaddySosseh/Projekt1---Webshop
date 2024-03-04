@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Glitter Flower Almond Press-on Nails",
+        "price": 240,
+        "image": "./img/image1.webp"
+    },
+    {
+        "id": 2,
+        "name": "White and Pink Heart Square Press-on Nails",
+        "price": 240,
+        "image": "./img/image2.webp"
+    },
+    {
+        "id": 3,
+        "name": "Blue Butterfly Coffin Press-ons Nails",
+        "price": 240,
+        "image": "./img/image3.webp"
+    },
+    {
+        "id": 4,
+        "name": "Goth black and white almond press-on nails",
+        "price": 300,
+        "image": "./img/image4.webp"
+    },
+    {
+        "id": 5,
+        "name": "White French tip with daisies long square press-on nails",
+        "price": 200,
+        "image": "./img/image5.webp"
+    },
+    {
+        "id": 6,
+        "name": "Jelly red square press on nails",
+        "price": 120,
+        "image": "./img/image6.webp"
+    },
+    {
+        "id": 7,
+        "name": "Pastel blue french tip oval press-on nails",
+        "price": 190,
+        "image": "./img/image7.webp"
+    },
+    {
+        "id": 8,
+        "name": "Gradient oval press-on nails",
+        "price": 120,
+        "image": "./img/image8.webp"
+    },
+    {
+        "id": 9,
+        "name": "Multicolored chrome almond press-on nails",
+        "price": 400,
+        "image": "./img/image9.webp"
+    }
+]
