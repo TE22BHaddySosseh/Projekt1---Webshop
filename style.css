@@ -7,11 +7,12 @@
     padding-left: 10px;
     padding-right: 940px;
     padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 li{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding-top: 40px;
+    padding-top: 50px;
     text-align: center;
     list-style: none;
     font-size: 20px;
@@ -22,11 +23,15 @@ li{
     flex-direction: row;
 }
 
+.top-hdr li > a{
+    padding-top: 20px;
+    color: #ffa0c8;
+}
 
 .iconcart{
     display: flex;
     color: #362418;
-    padding-top: 35px;
+    padding-top: 40px;
     padding-left: 30px;
 }
 
@@ -118,6 +123,10 @@ listcart::-webkit-scrollbar{
     border-top: 1px solid #362418;
 }
 
+.nav-main{
+    display: flex;
+}
+
 .preview {
     max-width: 1000px;
     position: relative;
@@ -180,10 +189,10 @@ nav{
     grid-area: nav;
 }
 
-h1{
+nav h1{
     font-size: 40px;
-    margin-left: 40px;
-    margin-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
 }
 
 h2{
@@ -193,9 +202,14 @@ h2{
 
 .catprod{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 40px;
+    margin-left: 60px;
     size: 25px;
     gap: 30px;
+}
+
+.catprod > a{
+    color: #362418;
+    row-gap: 10px;
 }
 
 main{
@@ -208,13 +222,15 @@ main{
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
+    padding-left: 100px;
 }
+
 
 article{
     margin-top: 20px;
     margin-left: 20px;
     margin-bottom: 50px;
-}
+} 
 
 button{
     border-radius: 20px;
@@ -231,12 +247,24 @@ img{
 }
 
 footer{
+    display: flex;
     background-color: #362418;
 }
 
-.logo{
-    margin-top: 20px;
-    margin-bottom: 20px;
+.logo img{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+}
+
+footer li{
+    padding-top: 70px;
+    padding-left: 700px;
+}
+
+footer li > a{
+    color: #ffa0c8;
 }
 
 .nav2{
@@ -265,14 +293,79 @@ footer{
         padding-top: 50px;
         font-size: 10px;
     }
+
+    footer li{
+        padding-left: 0px;
+    }
+
+    nav h1{
+        font-size: 20px;
+        padding-right: 30px;
+        padding-left: 20px;
+    }
+
+    .nav-main{
+        display: block;
+    }
+
+    .products{
+        padding-left: 20px;
+    }
+
+    .logo img{
+        width: 200px;
+        height: 90px;
+        padding-right: 20px;
+    }
+
+    .catprod{
+        padding-bottom: 20px;
+        padding-left: 0px;
+        font-size: 20px;
+    }
+
+    nav h1{
+        font-size: 40px;
+        padding-top: 20px;
+    }
+
+    .nav2 li{
+        font-size: 15px;
+        padding-top: 40px;
+    }
+
+    .top-hdr li{
+        font-size: 15px;
+        padding-top: 30px;
+    }
+
+    .iconcart img{
+        padding-top: 20px;
+    }
+
+        .carttab{
+        display: flex;
+        margin-bottom: 30px;
+        width: 87%;
+        height: 20%;
+        border-radius: 5px;
+        background-color: #FFD2E5;
+        margin-left: 20px;
+        padding: 15px;
+        position: fixed;
+        inset: 0 -370px 0 auto;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        
+    }
+
+    .showcart .container{
+        transform: translateX(-370px);
+    }
 }
 
 /* tablet */
-@media screen and (max-width: 1007px) and (min-width:641px ){
-    .prev, .next{
-        margin-top: 5px;
-    }
-    
+@media screen and (max-width: 1007px) and (min-width:641px ){ 
     .top-hdr{ 
         max-width: 100vw;
         width: fit-content;
@@ -286,5 +379,61 @@ footer{
     li{
         padding-top: 45px;
         font-size: 17px;
+    }
+
+    .products{
+        display: flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        padding-left: 40px;
+    }
+
+    nav h1{
+        font-size: 40px;
+        padding-right: 30px;
+        padding-left: 20px;
+    }
+    
+    .carttab{
+        display: flex;
+        margin-bottom: 30px;
+        width: 50%;
+        height: 20%;
+        border-radius: 5px;
+        background-color: #FFD2E5;
+        margin-left: 20px;
+        padding: 15px;
+        position: fixed;
+        inset: 0 -430px 0 auto;
+        display: grid;
+        grid-template-rows: 70px 1fr 70px;
+        
+    }
+
+    .showcart .container{
+        transform: translateX(-430px);
+    }
+
+    footer li{
+        padding-top: 70px;
+        padding-left: 100px;
+    }
+
+    article img{
+        border-radius: 30px;
+        width: 200px;
+        height: 200px;
+    }
+
+    article{
+        max-width: 250px;
+    }
+
+    .catprod{
+        margin-left: 40px;
+    }
+
+    .prev, .next{
+        top: 35%;
     }
 }

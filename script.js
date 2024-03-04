@@ -31,16 +31,6 @@ function addToCart(productId) {
     const selectedProduct = listProduct.find(product => product.id === productId);
 
     if (selectedProduct) {
-        console.log(`Added to cart: ${selectedProduct.name}`);
-    } else {
-        console.error(`Product with ID ${productId} not found.`);
-    }
-}
-
-function addToCart(productId) {
-    const selectedProduct = listProduct.find(product => product.id === productId);
-
-    if (selectedProduct) {
         const imageUrl = selectedProduct.image ? selectedProduct.image : './img/image.webp'
 
         const cartItemHTML = `
@@ -51,9 +41,9 @@ function addToCart(productId) {
                 <div class="name">${selectedProduct.name}</div>
                 <div class="totalprice">${selectedProduct.price}kr</div>
                 <div class="quantity">
-                    <span class="minus" onclick="inc(${productId}, -1)"><</span>
+                    <span class="minus" onclick="decreaseQuantity()">-</span>
                     <span class="quantity-value">1</span>
-                    <span class="plus" onclick="dec(${productId}, 1)">></span>
+                    <span class="plus" onclick="increaseQuantity()">+</span>
                 </div>
             </div>
         `;
